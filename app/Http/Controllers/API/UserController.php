@@ -92,5 +92,10 @@ class UserController extends Controller
 
         }
     }
+    public function index()
+    {
+        $user = User::all();
+        return response()->json($user);
+    }
 
 }
