@@ -33,4 +33,7 @@ Route::post('login',[UserController::class, 'login']);
 
 Route::get('login',[UserController::class, 'index']);
 
+Route::delete('/userdelete/{id}',[UserController::class, 'destroy']);
+
+
 Route::post('register',[UserController::class, 'register']);
