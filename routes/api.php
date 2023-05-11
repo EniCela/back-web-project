@@ -18,6 +18,8 @@ use App\Http\Controllers\NewsController;
 
 Route::get('/news',[App\Http\Controllers\NewsController::class, 'index']);
 
+Route::get('/news/{id}',[App\Http\Controllers\NewsController::class, 'show']);
+
 Route::post('/save',[App\Http\Controllers\NewsController::class, 'store']);
 
 Route::put('/update/{id}',[App\Http\Controllers\NewsController::class, 'update']);
@@ -35,5 +37,5 @@ Route::get('login',[UserController::class, 'index']);
 
 Route::delete('/userdelete/{id}',[UserController::class, 'destroy']);
 
-
 Route::post('register',[UserController::class, 'register']);
+
