@@ -4,6 +4,7 @@ use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\VideoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -38,4 +39,13 @@ Route::get('login',[UserController::class, 'index']);
 Route::delete('/userdelete/{id}',[UserController::class, 'destroy']);
 
 Route::post('register',[UserController::class, 'register']);
+
+//
+Route::get('/movie',[App\Http\Controllers\VideoController::class, 'index']);
+
+Route::post('/insert',[VideoController::class, 'insert']);
+
+Route::post('/insert_video',[VideoController::class, 'store']);
+
+
 
