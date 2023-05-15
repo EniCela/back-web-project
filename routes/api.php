@@ -4,7 +4,9 @@ use App\Http\Controllers\API\UserController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\Video2Controller;
 use App\Http\Controllers\VideoController;
+use App\Http\Controllers\VideoProvaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -46,6 +48,12 @@ Route::get('/movie',[App\Http\Controllers\VideoController::class, 'index']);
 Route::post('/insert',[VideoController::class, 'insert']);
 
 Route::post('/insert_video',[VideoController::class, 'store']);
+
+// Route::post('/insert_video',[VideoProvaController::class, 'insertvideo']);
+
+
+// Route::post('/upload',[Video2Controller::class, 'insert']);
+
 
 
 

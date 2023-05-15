@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('video', function (Blueprint $table) {
+        Schema::create('videoprova', function (Blueprint $table) {
             $table->id();
             $table->string('titulli');
             $table->string('viti');
@@ -20,7 +20,6 @@ return new class extends Migration
             $table->string('koha');
             $table->string('pershkrimi');
             $table->string('video');
-            // $table->string('foto');
             $table->timestamps();
         });
     }
@@ -30,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('video');
+        Schema::dropIfExists('videoprova');
     }
 };
