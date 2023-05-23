@@ -9,6 +9,6 @@ class video extends Model
 {
     protected $table = 'video';
     protected $primaryKey = 'id';
-    protected $fillable = ['titulli', 'viti','regjizori','cmimi','koha','pershkrimi','video'];
+    protected $fillable = ['titulli', 'viti','regjizori','cmimi','koha','pershkrimi','video','foto'];
     // use HasFactory;
 }

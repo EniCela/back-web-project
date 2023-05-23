@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\FormController;
+use App\Models\Form;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +19,21 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+// 127.0.0.1:8000/file-upload
+
+Route::get('/file-upload', function (){
+    return view('form');
+})->name('file-upload');
+
+Route::post('/file-save', function(Request $request){
+    $data=new Form;
+    if($files=$request->file('image')){
+    $name=$files->getClientOriginalName();
+    $files->move('upload',$name);
+    $data->path=$name;
+    }
+    $data->save();
+    return redirect('file-upload');
+})->name('file-save');
+

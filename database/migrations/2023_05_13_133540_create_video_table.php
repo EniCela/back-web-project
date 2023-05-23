@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use PhpParser\Node\NullableType;
 
 return new class extends Migration
 {
@@ -19,8 +20,8 @@ return new class extends Migration
             $table->string('cmimi');
             $table->string('koha');
             $table->string('pershkrimi');
-            $table->string('video');
-            // $table->string('foto');
+            $table->string('video')->nullable();
+            $table->string('foto')->nullable();
             $table->timestamps();
         });
     }
